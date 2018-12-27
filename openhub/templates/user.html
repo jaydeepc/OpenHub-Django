@@ -63,7 +63,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="author">
-                                    <img class="avatar border-gray" src="/media/profile_image/sai.jpg" alt="...">
+                                    <img class="avatar border-gray" src="/media/{{ contributor.user_photo }}" alt="...">
                                     <h5 class="title">{{ contributor.user_firstname }} {{ contributor.user_lastname }}</h5>
                                     <p class="description">
                                         {{ contributor.git_username }}
@@ -113,7 +113,7 @@
                                 <tbody>
                                 {% for project in projects %}
                                     <tr>
-                                        <td><a href="{% url 'projects' %}?q={{ project.project_name }}">{{ project.project_name }}</a></td>
+                                        <td><u><a href="{% url 'projects' %}?q={{ project.project_name }}">{{ project.project_name }}</a></u></td>
                                         <td>{{ project.total_stars }}</td>
                                         <td>{{ project.total_forks }}</td>
                                         <td>{{ project.total_issues }}</td>
